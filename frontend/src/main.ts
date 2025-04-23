@@ -31,7 +31,7 @@ myApp.mount("#app");
 
 // globals
 
-myApp.config.globalProperties.GlobalAppName = "MNLRBaseQuasar";
+myApp.config.globalProperties.GlobalAppName = "MNLRMap";
 
 // Globals type
 export {};

@@ -30,13 +30,14 @@ const router = createRouter({
             title: "About",
           },
         },
+
         {
-          path: "/collections",
-          name: "collections",
-          component: () => import("@/views/CollectionsView.vue"),
+          path: "/mapextract",
+          name: "mapextract",
+          component: () => import("@/views/MapExtractView.vue"),
           meta: {
-            icon: "folder",
-            title: "Collections",
+            icon: "map",
+            title: "Map Extract",
           },
         },
         {
@@ -75,13 +76,13 @@ const router = createRouter({
 
 //RouteGuard to check if user is authenticated and redirect to login page if not
 
-const unauthorizedRoutes = ["login", "register"];
+// const unauthorizedRoutes = ["login", "register"];
 
-router.beforeEach(async (to, from, next) => {
-  const isAuthenticated = await useAuth().getAuthState();
-  if (!isAuthenticated && !unauthorizedRoutes.includes(to.name as string)) {
-    next({ name: "login" });
-  } else next();
-});
+// router.beforeEach(async (to, from, next) => {
+//   const isAuthenticated = await useAuth().getAuthState();
+//   if (!isAuthenticated && !unauthorizedRoutes.includes(to.name as string)) {
+//     next({ name: "login" });
+//   } else next();
+// });
 
 export default router;
