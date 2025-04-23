@@ -1,0 +1,6 @@
+{
+  "vue.editor.focusMode": false,
+  "editor.formatOnSave": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "editor.codeActionsOnSave": {}
+}

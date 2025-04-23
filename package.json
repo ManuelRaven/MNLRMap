@@ -1,0 +1,53 @@
+{
+  "name": "mnlrbase",
+  "version": "0.0.6",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.9.0+sha512.0486e394640d3c1fb3c9d43d49cf92879ff74f8516959c235308f5a8f62e2e19528a65cdc2a3058f587cde71eba3d5b56327c8c33a97e4c4051ca48a10ca2d5f",
+  "scripts": {
+    "dev:client": "vite dev",
+    "dev:server": "cd backend && go run . --dir=../db serve",
+    "dev:server:snapshot": "cd backend && go run . --dir=../db migrate collections",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "build:client": "vite build",
+    "build:server": "cd backend && go build -tags production -ldflags=\"-w -s\" -o ../dist/mnlrbase.exe",
+    "build": "npm run build:client && npm run build:server",
+    "preview": "./dist/mnlrbase serve",
+    "compose": "docker compose up --build -d",
+    "dev:gentypes": "pocketbase-typegen --env --out=frontend/src/types/pocketbase-types.ts",
+    "gentypes": "node ./scripts/generate-types.js",
+    "patchandpush": "npm version patch && git push --follow-tags"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.17",
+    "pinia": "^3.0.0",
+    "pocketbase": "^0.26.0",
+    "quasar": "^2.18.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@iconify-json/bi": "^1.2.1",
+    "@quasar/vite-plugin": "^1.9.0",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.9.3",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/compiler-sfc": "^3.5.13",
+    "@vue/tsconfig": "^0.7.0",
+    "concurrently": "^9.1.0",
+    "npm-run-all2": "^7.0.1",
+    "pocketbase-typegen": "^1.3.0",
+    "sass-embedded": "^1.80.2",
+    "terminate": "^2.8.0",
+    "typescript": "~5.8.0",
+    "vite": "^6.0.1",
+    "vite-plugin-vue-devtools": "^7.6.5",
+    "vue-tsc": "^2.1.10"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sqlite3"
+    ]
+  }
+}

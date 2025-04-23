@@ -1,0 +1,11 @@
+FROM alpine:latest
+
+# Install CA certificates for HTTPS
+RUN apk --no-cache add ca-certificates
+
+# Copy the pre-built binary from GoReleaser
+COPY mnlrbase /
+
+EXPOSE 8090
+
+ENTRYPOINT ["/mnlrbase", "serve", "--http=0.0.0.0:8090"]
