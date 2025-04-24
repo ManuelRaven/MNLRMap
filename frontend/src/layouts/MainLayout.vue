@@ -11,7 +11,7 @@
         </q-toolbar-title>
         <q-space />
 
-        <div class="q-gutter-sm row items-center no-wrap">
+        <div v-show="false" class="q-gutter-sm row items-center no-wrap">
           <q-btn-dropdown
             flat
             round

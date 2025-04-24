@@ -27,6 +27,15 @@ import { usePb } from "@/composeables/usePb";
 import type { MapsRecord } from "@/types/pocketbase-types";
 import type { MapInfo } from "@/types/custom-types";
 
+import {
+  MaplibreExportControl,
+  Size,
+  PageOrientation,
+  Format,
+  DPI,
+} from "@watergis/maplibre-gl-export";
+import "@watergis/maplibre-gl-export/dist/maplibre-gl-export.css";
+
 const mapContainer = ref<HTMLElement | null>(null);
 const availableMaps = ref<MapsRecord[]>([]);
 const selectedMap = ref<MapsRecord | "">("");
@@ -102,6 +111,17 @@ const CreateMap = async (name: string) => {
 
     map.addControl(new maplibregl.NavigationControl(), "top-right");
     map.addControl(new maplibregl.ScaleControl(), "bottom-left");
+
+    const exportControl = new MaplibreExportControl({
+      PageSize: Size.A3,
+      PageOrientation: PageOrientation.Portrait,
+      Format: Format.PNG,
+      DPI: DPI[96],
+      Crosshair: true,
+      PrintableArea: true,
+      Local: "de",
+    });
+    map.addControl(exportControl, "top-right");
 
     // Fetch available maps after map initialization
   }
