@@ -41,6 +41,24 @@ const router = createRouter({
           },
         },
         {
+          path: "/localmapslist",
+          name: "localmapslist",
+          component: () => import("@/views/LocalMapsListView.vue"),
+          meta: {
+            icon: "map",
+            title: "Local Maps List",
+          },
+        },
+        {
+          path: "/localmaps",
+          name: "localmaps",
+          component: () => import("@/views/PMMapsViewer.vue"),
+          meta: {
+            icon: "map",
+            title: "Local Maps Viewer",
+          },
+        },
+        {
           path: "/profile",
           name: "profile",
           component: () => import("@/views/ProfileView.vue"),

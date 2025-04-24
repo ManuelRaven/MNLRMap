@@ -3,7 +3,6 @@ import vue from "@vitejs/plugin-vue";
 import path from "path";
 import { fileURLToPath } from "node:url";
 
-
 import { defineConfig, loadEnv } from "vite";
 import vueDevTools from "vite-plugin-vue-devtools";
 import { quasar, transformAssetUrls } from "@quasar/vite-plugin";
@@ -14,11 +13,10 @@ export default defineConfig(({ mode }) => {
   const backendUrl = env.VITE_BACKEND_URL || "http://localhost:8090";
   return {
     plugins: [
-      vue({template: { transformAssetUrls }}),
+      vue({ template: { transformAssetUrls } }),
       // @quasar/plugin-vite options list:
       // https://github.com/quasarframework/quasar/blob/dev/vite-plugin/index.d.ts
       quasar({
-        
         sassVariables: fileURLToPath(
           new URL("./frontend/src/quasar-variables.sass", import.meta.url)
         ),
@@ -34,6 +32,10 @@ export default defineConfig(({ mode }) => {
     server: {
       proxy: {
         "/api": {
+          target: backendUrl,
+          changeOrigin: true,
+        },
+        "/maps": {
           target: backendUrl,
           changeOrigin: true,
         },

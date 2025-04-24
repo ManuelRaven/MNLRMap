@@ -104,12 +104,19 @@ export type SuperusersRecord = {
 	verified?: boolean
 }
 
-export type MapsRecord<Tbbox = unknown> = {
-	bbox: null | Tbbox
+export enum MapsStatusOptions {
+	"pending" = "pending",
+	"processing" = "processing",
+	"completed" = "completed",
+	"failed" = "failed",
+}
+export type MapsRecord = {
+	bbox?: string
 	created?: IsoDateString
+	error?: string
 	id: string
 	name: string
-	pmtile?: string
+	status?: MapsStatusOptions
 	updated?: IsoDateString
 }
 
@@ -134,7 +141,7 @@ export type ExternalauthsResponse<Texpand = unknown> = Required<ExternalauthsRec
 export type MfasResponse<Texpand = unknown> = Required<MfasRecord> & BaseSystemFields<Texpand>
 export type OtpsResponse<Texpand = unknown> = Required<OtpsRecord> & BaseSystemFields<Texpand>
 export type SuperusersResponse<Texpand = unknown> = Required<SuperusersRecord> & AuthSystemFields<Texpand>
-export type MapsResponse<Tbbox = unknown, Texpand = unknown> = Required<MapsRecord<Tbbox>> & BaseSystemFields<Texpand>
+export type MapsResponse<Texpand = unknown> = Required<MapsRecord> & BaseSystemFields<Texpand>
 export type UsersResponse<Texpand = unknown> = Required<UsersRecord> & AuthSystemFields<Texpand>
 
 // Types containing all Records and Responses, useful for creating typing helper functions

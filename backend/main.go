@@ -34,6 +34,7 @@ func main() {
 	app := newApplication()
 	app.mountFs()
 	app.useMigrations()
+	app.usePMTiles()
 
 	log.Fatal(app.pb.Start())
 }

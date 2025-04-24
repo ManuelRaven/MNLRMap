@@ -6,3 +6,17 @@ export type UserRequest = Omit<UsersRecord, "id" | "tokenKey"> & {
 };
 
 export type AuthStoreUserRecord = Omit<UsersRecord, "password" | "tokenKey">;
+
+export interface MapInfo {
+  tile_compression: string;
+  tile_type: string;
+  minzoom: number;
+  maxzoom: number;
+  bounds: number[];
+  center: number[];
+}
+
+export interface MapSize {
+  name: string;
+  sizeBytes: number;
+}
