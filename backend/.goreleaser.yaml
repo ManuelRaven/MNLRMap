@@ -27,8 +27,8 @@ builds:
       - darwin
     flags:
       - -tags=production
-    id: "mnlrbase" # Add this line to identify the build
-    binary: "mnlrbase" # Add this line to name the binary
+    id: "mnlrmap" # Add this line to identify the build
+    binary: "mnlrmap" # Add this line to name the binary
 
 archives:
   - formats: ["tar.gz"]
@@ -47,8 +47,8 @@ archives:
 
 dockers:
   - image_templates:
-      - "ghcr.io/manuelraven/mnlrbase:{{ .Version }}-amd64"
-      - "{{ if not .IsSnapshot }}ghcr.io/manuelraven/mnlrbase:amd64{{ end }}"
+      - "ghcr.io/manuelraven/mnlrmap:{{ .Version }}-amd64"
+      - "{{ if not .IsSnapshot }}ghcr.io/manuelraven/mnlrmap:amd64{{ end }}"
     dockerfile: ../Dockerfile.goreleaser
     build_flag_templates:
       - "--pull"
@@ -58,12 +58,12 @@ dockers:
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
     ids:
-      - mnlrbase
+      - mnlrmap
     use: buildx
     skip_push: auto
   - image_templates:
-      - "ghcr.io/manuelraven/mnlrbase:{{ .Version }}-arm64v8"
-      - "{{ if not .IsSnapshot }}ghcr.io/manuelraven/mnlrbase:arm64v8{{ end }}"
+      - "ghcr.io/manuelraven/mnlrmap:{{ .Version }}-arm64v8"
+      - "{{ if not .IsSnapshot }}ghcr.io/manuelraven/mnlrmap:arm64v8{{ end }}"
     dockerfile: ../Dockerfile.goreleaser
     build_flag_templates:
       - "--pull"
@@ -74,19 +74,19 @@ dockers:
       - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
     goarch: arm64
     ids:
-      - mnlrbase
+      - mnlrmap
     use: buildx
     skip_push: auto
 
 docker_manifests:
-  - name_template: "ghcr.io/manuelraven/mnlrbase:{{ .Version }}"
+  - name_template: "ghcr.io/manuelraven/mnlrmap:{{ .Version }}"
     image_templates:
-      - "ghcr.io/manuelraven/mnlrbase:{{ .Version }}-amd64"
-      - "ghcr.io/manuelraven/mnlrbase:{{ .Version }}-arm64v8"
-  - name_template: "{{ if not .IsSnapshot }}ghcr.io/manuelraven/mnlrbase:latest{{ end }}"
+      - "ghcr.io/manuelraven/mnlrmap:{{ .Version }}-amd64"
+      - "ghcr.io/manuelraven/mnlrmap:{{ .Version }}-arm64v8"
+  - name_template: "{{ if not .IsSnapshot }}ghcr.io/manuelraven/mnlrmap:latest{{ end }}"
     image_templates:
-      - "ghcr.io/manuelraven/mnlrbase:{{ .Version }}-amd64"
-      - "ghcr.io/manuelraven/mnlrbase:{{ .Version }}-arm64v8"
+      - "ghcr.io/manuelraven/mnlrmap:{{ .Version }}-amd64"
+      - "ghcr.io/manuelraven/mnlrmap:{{ .Version }}-arm64v8"
 
 changelog:
   sort: asc
