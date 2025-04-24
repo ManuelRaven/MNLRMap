@@ -7,7 +7,7 @@ backend/dist
 .vscode/*
 
 # Compiled binary
-mnlrbase
+mnlrmap
 
 # Database
 db

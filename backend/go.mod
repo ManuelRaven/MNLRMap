@@ -1,4 +1,4 @@
-module mnlr.de/MNLRBase
+module mnlr.de/mnlrmap
 
 go 1.24
 

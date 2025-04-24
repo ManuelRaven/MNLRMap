@@ -1,5 +1,5 @@
 {
-  "name": "mnlrbase",
+  "name": "mnlrmap",
   "version": "0.0.8",
   "private": true,
   "type": "module",
@@ -10,9 +10,9 @@
     "dev:server:snapshot": "cd backend && go run . --dir=../db migrate collections",
     "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
     "build:client": "vite build",
-    "build:server": "cd backend && go build -tags production -ldflags=\"-w -s\" -o ../dist/mnlrbase.exe",
+    "build:server": "cd backend && go build -tags production -ldflags=\"-w -s\" -o ../dist/mnlrmap.exe",
     "build": "npm run build:client && npm run build:server",
-    "preview": "./dist/mnlrbase serve",
+    "preview": "./dist/mnlrmap serve",
     "compose": "docker compose up --build -d",
     "dev:gentypes": "pocketbase-typegen --env --out=frontend/src/types/pocketbase-types.ts",
     "gentypes": "node ./scripts/generate-types.js",

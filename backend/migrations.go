@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/pocketbase/pocketbase/plugins/migratecmd"
-	_ "mnlr.de/MNLRBase/migrations"
+	_ "mnlr.de/mnlrmap/migrations"
 )
 
 func (app *application) useMigrations() {

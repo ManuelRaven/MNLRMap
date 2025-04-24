@@ -4,8 +4,8 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 
 # Copy the pre-built binary from GoReleaser
-COPY mnlrbase /
+COPY mnlrmap /
 
 EXPOSE 8090
 
-ENTRYPOINT ["/mnlrbase", "serve", "--http=0.0.0.0:8090"]
+ENTRYPOINT ["/mnlrmap", "serve", "--http=0.0.0.0:8090"]

@@ -1,9 +1,9 @@
 services:
-  mnlrbase:
+  mnlrmap:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: mnlrbase
+    container_name: mnlrmap
     restart: unless-stopped
     # environment:
     #   - MAILER_CRON_SCHEDULE=${MAILER_CRON_SCHEDULE:-0 9 * * *}
