@@ -90,6 +90,18 @@
           <q-td :props="props" class="q-gutter-sm">
             <q-btn
               size="sm"
+              color="info"
+              icon="info"
+              round
+              dense
+              @click="showMapInfo(props.row)"
+              :disable="props.row.status !== 'completed'"
+            >
+              <q-tooltip>Map Info</q-tooltip>
+            </q-btn>
+
+            <q-btn
+              size="sm"
               color="primary"
               icon="refresh"
               round
@@ -172,6 +184,95 @@
         </q-card-actions>
       </q-card>
     </q-dialog>
+
+    <!-- Map Info Dialog -->
+    <q-dialog v-model="mapInfoDialog">
+      <q-card style="width: 700px; max-width: 80vw">
+        <q-card-section class="row items-center">
+          <q-avatar icon="map" color="info" text-color="white" />
+          <span class="text-h6 q-ml-sm">Map Information</span>
+          <q-space />
+          <q-btn icon="close" flat round dense v-close-popup />
+        </q-card-section>
+
+        <q-card-section v-if="selectedMap">
+          <div class="q-mb-md">
+            <div class="text-subtitle1"><strong>Map Details</strong></div>
+            <div class="q-pl-md">
+              <div><strong>Name:</strong> {{ selectedMap.name }}</div>
+              <div><strong>Status:</strong> {{ selectedMap.status }}</div>
+              <div v-if="mapSizes[selectedMap.id]">
+                <strong>Size:</strong>
+                {{ formatFileSize(mapSizes[selectedMap.id]) }}
+              </div>
+            </div>
+          </div>
+
+          <div class="q-mb-md">
+            <div class="text-subtitle1"><strong>PMTiles URL</strong></div>
+            <div class="q-pa-sm rounded-borders">
+              <code>{{ pmtilesUrl }}</code>
+              <q-btn
+                size="xs"
+                flat
+                color="primary"
+                icon="content_copy"
+                class="q-ml-sm"
+                @click="copyToClipboard(pmtilesUrl)"
+              >
+                <q-tooltip>Copy to clipboard</q-tooltip>
+              </q-btn>
+            </div>
+          </div>
+
+          <div class="q-mb-md">
+            <div class="text-subtitle1">
+              <strong>Using with Protomaps</strong>
+            </div>
+            <div class="q-pa-sm rounded-borders text-caption">
+              <pre class="code-snippet">
+import { Protocol } from "pmtiles";
+import maplibregl from "maplibre-gl";
+import { layers, namedFlavor } from "@protomaps/basemaps";
+
+// Register pmtiles protocol
+const protocol = new Protocol();
+maplibregl.addProtocol("pmtiles", protocol.tile);
+
+// Create map with pmtiles source
+const map = new maplibregl.Map({
+  container: "map",
+  style: {
+    version: 8,
+    glyphs: "https://your-domain.com/basemap/fonts/{fontstack}/{range}.pbf",
+    sprite: "https://your-domain.com/basemap/sprites/v4/light",
+    sources: {
+      protomaps: {
+        type: "vector",
+        url: "{{ pmtilesUrl }}",
+      },
+    },
+    layers: layers("protomaps", namedFlavor("light")),
+  },
+  center: [11.0, 49.5], // Default center
+  zoom: 12, // Default zoom level
+});</pre
+              >
+              <q-btn
+                size="xs"
+                flat
+                color="primary"
+                icon="content_copy"
+                class="q-mt-sm"
+                @click="copyCodeSnippet"
+              >
+                Copy code snippet
+              </q-btn>
+            </div>
+          </div>
+        </q-card-section>
+      </q-card>
+    </q-dialog>
   </div>
 </template>
 
@@ -197,9 +298,14 @@ const pagination = ref({
 const processingMaps = ref<Record<string, boolean>>({});
 const confirmDeleteDialog = ref(false);
 const confirmRecreateDialog = ref(false);
+const mapInfoDialog = ref(false);
 const selectedMap = ref<MapsRecord | null>(null);
 const isDeleting = ref(false);
 const isRecreating = ref(false);
+const pmtilesUrl = computed(() => {
+  if (!selectedMap.value || !selectedMap.value.name) return "";
+  return `${window.location.origin}/maps/serve/${selectedMap.value.name}.pmtiles`;
+});
 
 // Table columns
 const tableColumns = [
@@ -405,6 +511,68 @@ const recreateMapAction = async () => {
   }
 };
 
+// Show map info dialog
+const showMapInfo = (map: MapsRecord) => {
+  selectedMap.value = map;
+  mapInfoDialog.value = true;
+};
+
+// Copy to clipboard function
+const copyToClipboard = (text: string) => {
+  navigator.clipboard.writeText(text).then(
+    () => {
+      $q.notify({
+        color: "positive",
+        message: "Copied to clipboard",
+        icon: "content_copy",
+        timeout: 2000,
+      });
+    },
+    (err) => {
+      console.error("Could not copy text: ", err);
+      $q.notify({
+        color: "negative",
+        message: "Failed to copy to clipboard",
+        icon: "error",
+      });
+    }
+  );
+};
+
+// Copy code snippet
+const copyCodeSnippet = () => {
+  if (!selectedMap.value) return;
+
+  const codeTemplate = `import { Protocol } from "pmtiles";
+import maplibregl from "maplibre-gl";
+import { layers, namedFlavor } from "@protomaps/basemaps";
+
+// Register pmtiles protocol
+const protocol = new Protocol();
+maplibregl.addProtocol("pmtiles", protocol.tile);
+
+// Create map with pmtiles source
+const map = new maplibregl.Map({
+  container: "map",
+  style: {
+    version: 8,
+    glyphs: "${window.location.origin}/basemap/fonts/{fontstack}/{range}.pbf",
+    sprite: "${window.location.origin}/basemap/sprites/v4/light",
+    sources: {
+      protomaps: {
+        type: "vector",
+        url: "${pmtilesUrl.value}",
+      },
+    },
+    layers: layers("protomaps", namedFlavor("light")),
+  },
+  center: [11.0, 49.5], // Default center
+  zoom: 12, // Default zoom level
+});`;
+
+  copyToClipboard(codeTemplate);
+};
+
 // Initialize the component
 onMounted(() => {
   fetchMaps();
@@ -424,5 +592,14 @@ onUnmounted(() => {
 .maps-container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.code-snippet {
+  white-space: pre;
+  overflow-x: auto;
+  margin: 0;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.4;
 }
 </style>
