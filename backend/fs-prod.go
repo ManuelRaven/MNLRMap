@@ -11,7 +11,7 @@ import (
 	"github.com/pocketbase/pocketbase/core"
 )
 
-//go:embed dist
+//go:embed all:dist
 var embeddedFiles embed.FS
 
 // mountFs configures the embedded file system for the application's

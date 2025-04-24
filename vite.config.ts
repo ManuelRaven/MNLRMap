@@ -26,6 +26,7 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: "./backend/dist",
       emptyOutDir: true,
+      chunkSizeWarningLimit: 1600,
     },
     publicDir: "./frontend/public",
     resolve: { alias: { "@": path.resolve(__dirname, "./frontend/src") } },
