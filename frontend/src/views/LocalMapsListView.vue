@@ -494,7 +494,7 @@ const recreateMapAction = async () => {
 
     $q.notify({
       spinner: true,
-      message: `Map "${selectedMap.value.name}" wird nun neu erstellt, je nach Größe kann das einige Minuten dauern`,
+      message: `Map "${selectedMap.value.name}" is being recreated... This may take a while.`,
       icon: "refresh",
     });
   } catch (error) {
