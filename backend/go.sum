@@ -252,6 +252,8 @@ github.com/prometheus/procfs v0.12.0 h1:jluTpSng7V9hY0O2R9DzzJHYb2xULk9VTR1V1R/k
 github.com/prometheus/procfs v0.12.0/go.mod h1:pcuDEFsWDnvcgNzo4EEweacyhjeA9Zk3cnaOZAZEfOo=
 github.com/protomaps/go-pmtiles v1.27.2 h1:ladlfCZk7fn99gAZBQwtL1V6rG5YMQLRVd8OpB6fM3I=
 github.com/protomaps/go-pmtiles v1.27.2/go.mod h1:tCEruxxxH00eYcl/5cdaeHRJCYRKNocXBerFXJ/dON4=
+github.com/protomaps/go-pmtiles v1.28.0 h1:Q23U0DqfVE0PM2ZVcehgZ4yIjd73jcK5UMKcX6K5R3c=
+github.com/protomaps/go-pmtiles v1.28.0/go.mod h1:tCEruxxxH00eYcl/5cdaeHRJCYRKNocXBerFXJ/dON4=
 github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec h1:W09IVJc94icq4NjY3clb7Lk8O1qJ8BdBEF8z0ibU0rE=
 github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec/go.mod h1:qqbHyh8v60DhA7CoWK5oRCqLrMHRGoxYCSS9EjAz6Eo=
 github.com/rivo/uniseg v0.2.0 h1:S1pD9weZBuJdFmowNwbpi7BJ8TNftyUImj/0WQi72jY=

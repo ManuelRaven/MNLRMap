@@ -4,7 +4,7 @@ go 1.24
 
 require (
 	github.com/pocketbase/pocketbase v0.27.2
-	github.com/protomaps/go-pmtiles v1.27.2
+	github.com/protomaps/go-pmtiles v1.28.0
 )
 
 require (
