@@ -44,7 +44,7 @@ importers:
     devDependencies:
       '@iconify-json/bi':
         specifier: ^1.2.1
-        version: 1.2.3
+        version: 1.2.4
       '@quasar/vite-plugin':
         specifier: ^1.9.0
         version: 1.9.0(@vitejs/plugin-vue@5.2.4(vite@6.3.5(@types/node@22.15.17)(sass-embedded@1.88.0))(vue@3.5.13(typescript@5.8.3)))(quasar@2.18.1)(vite@6.3.5(@types/node@22.15.17)(sass-embedded@1.88.0))(vue@3.5.13(typescript@5.8.3))
@@ -408,8 +408,8 @@ packages:
   '@gar/promisify@1.1.3':
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
 
-  '@iconify-json/bi@1.2.3':
-    resolution: {integrity: sha512-pDNU9mIKDfvVEGxWsExiuVEqyhyJ5q5bOwBTgtM7I2hGk9ACQaiogMaA6lBRJ82sJPj+Uv21Oi+ujThGnMW2jA==}
+  '@iconify-json/bi@1.2.4':
+    resolution: {integrity: sha512-ipD8nm86ovjgXGEJj/B5oSJGaEIsGgzrKqNT1ei66nRExzK6Mgh4an/efG30Xtvp2eQjz9eWN5kHmadbnjUmzw==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2472,7 +2472,7 @@ snapshots:
   '@gar/promisify@1.1.3':
     optional: true
 
-  '@iconify-json/bi@1.2.3':
+  '@iconify-json/bi@1.2.4':
     dependencies:
       '@iconify/types': 2.0.0
 
