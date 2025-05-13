@@ -3,7 +3,7 @@ module mnlr.de/mnlrmap
 go 1.24
 
 require (
-	github.com/pocketbase/pocketbase v0.28.0
+	github.com/pocketbase/pocketbase v0.28.1
 	github.com/protomaps/go-pmtiles v1.28.0
 )
 
