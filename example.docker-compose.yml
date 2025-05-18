@@ -13,7 +13,7 @@ services:
     image: ghcr.io/manuelraven/mnlrmap:latest
     container_name: mnlrmap
     environment:
-      - MNLRADDRESSSERVER=mnlraddressserver:8809
+      - MNLRADDRESSSERVER=http://mnlraddressserver:8809
     ports:
       - "8090:8090"
     volumes:
