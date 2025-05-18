@@ -18,23 +18,28 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, watch } from "vue";
+import { usePb } from "@/composeables/usePb";
+import type { GeoResponse, MapInfo } from "@/types/custom-types";
+import type { MapsRecord } from "@/types/pocketbase-types";
+import MaplibreGeocoder, {
+  type CarmenGeojsonFeature,
+  type MaplibreGeocoderApi,
+  type MaplibreGeocoderSuggestionResults,
+} from "@maplibre/maplibre-gl-geocoder";
+import "@maplibre/maplibre-gl-geocoder/dist/maplibre-gl-geocoder.css";
+import { layers, namedFlavor } from "@protomaps/basemaps";
+import {
+  DPI,
+  Format,
+  MaplibreExportControl,
+  PageOrientation,
+  Size,
+} from "@watergis/maplibre-gl-export";
+import "@watergis/maplibre-gl-export/dist/maplibre-gl-export.css";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { Protocol } from "pmtiles";
-import { layers, namedFlavor } from "@protomaps/basemaps";
-import { usePb } from "@/composeables/usePb";
-import type { MapsRecord } from "@/types/pocketbase-types";
-import type { MapInfo } from "@/types/custom-types";
-
-import {
-  MaplibreExportControl,
-  Size,
-  PageOrientation,
-  Format,
-  DPI,
-} from "@watergis/maplibre-gl-export";
-import "@watergis/maplibre-gl-export/dist/maplibre-gl-export.css";
+import { onMounted, onUnmounted, ref, watch } from "vue";
 
 const mapContainer = ref<HTMLElement | null>(null);
 const availableMaps = ref<MapsRecord[]>([]);
@@ -112,6 +117,87 @@ const CreateMap = async (name: string) => {
     map.addControl(new maplibregl.NavigationControl(), "top-right");
     map.addControl(new maplibregl.ScaleControl(), "bottom-left");
 
+    var Geo: MaplibreGeocoderApi = {
+      // required
+      forwardGeocode: async (config) => {
+        try {
+          if (!config.query) {
+            return {
+              type: "FeatureCollection",
+              features: [],
+            };
+          }
+
+          const response = await fetchGeocode(config.query.toString());
+          const features: CarmenGeojsonFeature[] = [];
+
+          for (const item of response) {
+            features.push({
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [item.longitude, item.latitude],
+              },
+              properties: {
+                label: `${item.street} ${item.house_number}, ${item.city}`,
+                place_name: `${item.street} ${item.house_number}, ${item.city}`,
+                id: item.id,
+                place_id: item.id,
+              },
+              id: "",
+              text: `${item.street} ${item.house_number}, ${item.city}`,
+              place_name: `${item.street} ${item.house_number}, ${item.city}`,
+              place_type: [],
+            });
+          }
+
+          return {
+            type: "FeatureCollection",
+            features: features,
+          };
+        } catch (error) {
+          console.error("Geocoding error:", error);
+          return {
+            type: "FeatureCollection",
+            features: [],
+          };
+        }
+      },
+
+      async getSuggestions(config) {
+        try {
+          if (!config.query) {
+            return {
+              suggestions: [],
+            };
+          }
+
+          const response = await fetchGeocode(config.query.toString());
+          const suggestionsResult: MaplibreGeocoderSuggestionResults = {
+            suggestions: [],
+          };
+
+          for (const item of response) {
+            suggestionsResult.suggestions.push({
+              text: `${item.street} ${item.house_number}, ${item.city}`,
+              placeId: `${item.street} ${item.house_number}, ${item.city}`,
+            });
+          }
+
+          return suggestionsResult;
+        } catch (error) {
+          console.error("Geocoding error:", error);
+          return {
+            suggestions: [],
+          };
+        }
+      },
+    };
+
+    // Pass in or define a geocoding API that matches the above
+    const geocoder = new MaplibreGeocoder(Geo, { maplibregl: maplibregl });
+    map.addControl(geocoder, "bottom-left");
+
     const exportControl = new MaplibreExportControl({
       PageSize: Size.A3,
       PageOrientation: PageOrientation.Portrait,
@@ -142,6 +228,23 @@ const fetchMapInfo = async (mapName: string): Promise<MapInfo> => {
     const mapInfoResponse: MapInfo = await pb.send("/maps/info/" + mapName, {
       method: "GET",
     });
+
+    console.log("Map info:", mapInfoResponse);
+    return mapInfoResponse;
+  } catch (error) {
+    console.error("Error fetching map info:", error);
+    throw error;
+  }
+};
+
+const fetchGeocode = async (search: string): Promise<GeoResponse[]> => {
+  try {
+    const mapInfoResponse: GeoResponse[] = await pb.send(
+      "/geoapi/geocode?q=" + search,
+      {
+        method: "GET",
+      }
+    );
 
     console.log("Map info:", mapInfoResponse);
     return mapInfoResponse;

@@ -1,11 +1,11 @@
 import vue from "@vitejs/plugin-vue";
 
-import path from "path";
 import { fileURLToPath } from "node:url";
+import path from "path";
 
+import { quasar, transformAssetUrls } from "@quasar/vite-plugin";
 import { defineConfig, loadEnv } from "vite";
 import vueDevTools from "vite-plugin-vue-devtools";
-import { quasar, transformAssetUrls } from "@quasar/vite-plugin";
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
@@ -37,6 +37,10 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true,
         },
         "/maps": {
+          target: backendUrl,
+          changeOrigin: true,
+        },
+        "/geoapi": {
           target: backendUrl,
           changeOrigin: true,
         },

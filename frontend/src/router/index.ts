@@ -1,4 +1,3 @@
-import { useAuth } from "@/composeables/useAuth";
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
@@ -26,6 +25,15 @@ const router = createRouter({
           meta: {
             icon: "map",
             title: "Map Extract",
+          },
+        },
+        {
+          path: "/geocodebackend",
+          name: "geocodebackend",
+          component: () => import("@/views/GecodeBackendView.vue"),
+          meta: {
+            icon: "search",
+            title: "GeoCode Backend",
           },
         },
         {

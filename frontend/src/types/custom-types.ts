@@ -20,3 +20,17 @@ export interface MapSize {
   name: string;
   sizeBytes: number;
 }
+
+export interface GeoResponse {
+  id: number;
+  street: string;
+  house_number: string;
+  city: string;
+  longitude: number;
+  latitude: number;
+}
+
+export interface BackendInfo {
+  reachable: boolean;
+  name: string;
+}

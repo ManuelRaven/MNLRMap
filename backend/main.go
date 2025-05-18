@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/joho/godotenv"
 	"github.com/pocketbase/pocketbase"
 )
 
@@ -31,10 +32,13 @@ func newApplication() *application {
 }
 
 func main() {
+
+	godotenv.Load()
 	app := newApplication()
 	app.mountFs()
 	app.useMigrations()
 	app.usePMTiles()
+	app.useGeocoder()
 
 	log.Fatal(app.pb.Start())
 }
