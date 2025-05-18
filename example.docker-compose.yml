@@ -1,0 +1,21 @@
+version: "3"
+services:
+  mnlraddresserver:
+    image: ghcr.io/manuelraven/mnlraddressserver:latest
+    container_name: mnlraddressserver
+    ports:
+      - "8809:8809"
+    volumes:
+      - ./adresserverdata:/data
+    restart: unless-stopped
+
+  mnlrmap:
+    image: ghcr.io/manuelraven/mnlrmap:latest
+    container_name: mnlrmap
+    environment:
+      - MNLRADDRESSSERVER=mnlraddressserver:8809
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./data:/db
+    restart: unless-stopped
