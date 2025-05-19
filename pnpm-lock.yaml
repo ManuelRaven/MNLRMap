@@ -56,7 +56,7 @@ importers:
         version: 22.0.1
       '@types/leaflet':
         specifier: ^1.9.17
-        version: 1.9.17
+        version: 1.9.18
       '@types/node':
         specifier: ^22.9.3
         version: 22.15.19
@@ -65,7 +65,7 @@ importers:
         version: 5.2.4(vite@6.3.5(@types/node@22.15.19)(sass-embedded@1.89.0))(vue@3.5.14(typescript@5.8.3))
       '@vue-leaflet/vue-leaflet':
         specifier: ^0.10.1
-        version: 0.10.1(@types/leaflet@1.9.17)(leaflet@1.9.4)(typescript@5.8.3)
+        version: 0.10.1(@types/leaflet@1.9.18)(leaflet@1.9.4)(typescript@5.8.3)
       '@vue/compiler-sfc':
         specifier: ^3.5.13
         version: 3.5.14
@@ -630,8 +630,8 @@ packages:
   '@types/leaflet-draw@1.0.12':
     resolution: {integrity: sha512-ayjGxelc3pp7532852Qn/LYHs/CHOcUqM9iDVsXuIXbIGfM2h3OtsHO/sQzFO6GAz2IvslPupgJaYocsY8NH+g==}
 
-  '@types/leaflet@1.9.17':
-    resolution: {integrity: sha512-IJ4K6t7I3Fh5qXbQ1uwL3CFVbCi6haW9+53oLWgdKlLP7EaS21byWFJxxqOx9y8I0AP0actXSJLVMbyvxhkUTA==}
+  '@types/leaflet@1.9.18':
+    resolution: {integrity: sha512-ht2vsoPjezor5Pmzi5hdsA7F++v5UGq9OlUduWHmMZiuQGIpJ2WS5+Gg9HaAA79gNh1AIPtCqhzejcIZ3lPzXQ==}
 
   '@types/mapbox__point-geometry@0.1.4':
     resolution: {integrity: sha512-mUWlSxAmYLfwnRBmgYV86tgYmMIICX4kza8YnE/eIlywGe2XoOxlpVnXWwir92xRLjwyarqwpu2EJKD2pk0IUA==}
@@ -2675,9 +2675,9 @@ snapshots:
 
   '@types/leaflet-draw@1.0.12':
     dependencies:
-      '@types/leaflet': 1.9.17
+      '@types/leaflet': 1.9.18
 
-  '@types/leaflet@1.9.17':
+  '@types/leaflet@1.9.18':
     dependencies:
       '@types/geojson': 7946.0.16
 
@@ -2722,12 +2722,12 @@ snapshots:
       path-browserify: 1.0.1
       vscode-uri: 3.1.0
 
-  '@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.17)(leaflet@1.9.4)(typescript@5.8.3)':
+  '@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.18)(leaflet@1.9.4)(typescript@5.8.3)':
     dependencies:
       leaflet: 1.9.4
       vue: 3.5.14(typescript@5.8.3)
     optionalDependencies:
-      '@types/leaflet': 1.9.17
+      '@types/leaflet': 1.9.18
     transitivePeerDependencies:
       - typescript
 
