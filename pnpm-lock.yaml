@@ -34,7 +34,7 @@ importers:
         version: 4.3.0
       pocketbase:
         specifier: ^0.26.0
-        version: 0.26.0
+        version: 0.26.1
       quasar:
         specifier: ^2.18.1
         version: 2.18.1
@@ -1774,8 +1774,8 @@ packages:
     resolution: {integrity: sha512-nwPkcZU/EFDdGfVJWiaEKstkHWFXvf8RrmE36xANCXPwDo4OI5OS70CN3N/Ruw1CVx87EaGCbquVs0yRD3IqpQ==}
     hasBin: true
 
-  pocketbase@0.26.0:
-    resolution: {integrity: sha512-WBBeOgz4Jnrd7a1KEzSBUJqpTortKKCcp16j5KoF+4tNIyQHsmynj+qRSvS56/RVacVMbAqO8Qkfj3N84fpzEw==}
+  pocketbase@0.26.1:
+    resolution: {integrity: sha512-fjcPDpxyqTZCwqGUTPUV7vssIsNMqHxk9GxbhxYHPEf18RqX2d9cpSqbbHk7aas30jqkgptuKfG7aY/Mytjj3g==}
 
   postcss@8.5.3:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
@@ -4049,7 +4049,7 @@ snapshots:
       - encoding
       - supports-color
 
-  pocketbase@0.26.0: {}
+  pocketbase@0.26.1: {}
 
   postcss@8.5.3:
     dependencies:
