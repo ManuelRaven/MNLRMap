@@ -7,7 +7,7 @@ toolchain go1.24.4
 require (
 	github.com/codingsince1985/geo-golang v1.8.5
 	github.com/joho/godotenv v1.5.1
-	github.com/pocketbase/pocketbase v0.28.2
+	github.com/pocketbase/pocketbase v0.28.3
 	github.com/protomaps/go-pmtiles v1.28.0
 )
 
@@ -71,7 +71,7 @@ require (
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/rs/cors v1.11.1 // indirect
 	github.com/schollz/progressbar/v3 v3.13.1 // indirect
-	github.com/spf13/cast v1.8.0 // indirect
+	github.com/spf13/cast v1.9.2 // indirect
 	github.com/spf13/cobra v1.9.1 // indirect
 	github.com/spf13/pflag v1.0.6 // indirect
 	go.mongodb.org/mongo-driver v1.11.4 // indirect
@@ -83,15 +83,15 @@ require (
 	go.opentelemetry.io/otel/metric v1.34.0 // indirect
 	go.opentelemetry.io/otel/trace v1.34.0 // indirect
 	gocloud.dev v0.40.0 // indirect
-	golang.org/x/crypto v0.38.0 // indirect
-	golang.org/x/exp v0.0.0-20250506013437-ce4c2cf36ca6 // indirect
-	golang.org/x/image v0.27.0 // indirect
-	golang.org/x/net v0.40.0 // indirect
+	golang.org/x/crypto v0.39.0 // indirect
+	golang.org/x/exp v0.0.0-20250606033433-dcc06ee1d476 // indirect
+	golang.org/x/image v0.28.0 // indirect
+	golang.org/x/net v0.41.0 // indirect
 	golang.org/x/oauth2 v0.30.0 // indirect
-	golang.org/x/sync v0.14.0 // indirect
+	golang.org/x/sync v0.15.0 // indirect
 	golang.org/x/sys v0.33.0 // indirect
 	golang.org/x/term v0.32.0 // indirect
-	golang.org/x/text v0.25.0 // indirect
+	golang.org/x/text v0.26.0 // indirect
 	golang.org/x/time v0.10.0 // indirect
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
 	google.golang.org/api v0.221.0 // indirect
@@ -100,9 +100,9 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250212204824-5a70512c5d8b // indirect
 	google.golang.org/grpc v1.70.0 // indirect
 	google.golang.org/protobuf v1.36.5 // indirect
-	modernc.org/libc v1.65.7 // indirect
+	modernc.org/libc v1.65.10 // indirect
 	modernc.org/mathutil v1.7.1 // indirect
 	modernc.org/memory v1.11.0 // indirect
-	modernc.org/sqlite v1.37.1 // indirect
+	modernc.org/sqlite v1.38.0 // indirect
 	zombiezen.com/go/sqlite v1.1.2 // indirect
 )
