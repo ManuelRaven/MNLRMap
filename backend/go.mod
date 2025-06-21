@@ -7,7 +7,7 @@ toolchain go1.24.4
 require (
 	github.com/codingsince1985/geo-golang v1.8.5
 	github.com/joho/godotenv v1.5.1
-	github.com/pocketbase/pocketbase v0.28.3
+	github.com/pocketbase/pocketbase v0.28.4
 	github.com/protomaps/go-pmtiles v1.28.0
 )
 
