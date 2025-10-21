@@ -13,7 +13,7 @@ importers:
         version: 1.9.1(maplibre-gl@5.9.0)
       '@protomaps/basemaps':
         specifier: ^5.3.0
-        version: 5.5.1
+        version: 5.5.2
       '@quasar/extras':
         specifier: ^1.16.17
         version: 1.17.0
@@ -571,8 +571,8 @@ packages:
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
 
-  '@protomaps/basemaps@5.5.1':
-    resolution: {integrity: sha512-dAQS0AVJcnPz5E6hfBxlu56MOYfkzq17wf+kXLGhHN8U9qNxYJZtoiRA9Q3hnTwKi7iAQ0rIekAF399skcX7fQ==}
+  '@protomaps/basemaps@5.5.2':
+    resolution: {integrity: sha512-IFp+R6f401wu5R3UJ4XgwqeiCzqvr+i6HFOf1YRp3eMP+j6kzRObCd5YfBU3D7rqpKzEnUiP1w601Z0E1tDlvA==}
     hasBin: true
 
   '@quasar/extras@1.17.0':
@@ -1270,8 +1270,8 @@ packages:
     resolution: {integrity: sha512-kVCxPF3vQM/N0B1PmoqVUqgHP+EeVjmZSQn+1oCRPxd2P21P2F19lIgbR3HBosbB1PUhOAoctJnfEn2GbN2eZA==}
     engines: {node: '>=18'}
 
-  get-tsconfig@4.10.1:
-    resolution: {integrity: sha512-auHyJ4AgMz7vgS8Hp3N6HXSmlMdUyhSUrfBF16w153rxtLIEOE+HGqaBppczZvnHLqQJfiHotCYpNhl0lUROFQ==}
+  get-tsconfig@4.12.0:
+    resolution: {integrity: sha512-LScr2aNr2FbjAjZh2C6X6BxRx1/x+aTDExct/xyq2XKbYOiG5c0aK7pMsSuyc0brz3ibr/lbQiHD9jzt4lccJw==}
 
   github-from-package@0.0.0:
     resolution: {integrity: sha512-SyHy3T1v2NUXn29OsWdxmK6RwHD+vkj3v8en8AOBZ1wBQ/hCAQ5bAQTD02kW4W9tUp/3Qh6J8r9EvntiyCmOOw==}
@@ -2779,9 +2779,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@protomaps/basemaps@5.5.1':
-    dependencies:
-      tsx: 4.20.3
+  '@protomaps/basemaps@5.5.2': {}
 
   '@quasar/extras@1.17.0': {}
 
@@ -3545,9 +3543,10 @@ snapshots:
       '@sec-ant/readable-stream': 0.4.1
       is-stream: 4.0.1
 
-  get-tsconfig@4.10.1:
+  get-tsconfig@4.12.0:
     dependencies:
       resolve-pkg-maps: 1.0.0
+    optional: true
 
   github-from-package@0.0.0: {}
 
@@ -4115,7 +4114,8 @@ snapshots:
 
   require-directory@2.1.1: {}
 
-  resolve-pkg-maps@1.0.0: {}
+  resolve-pkg-maps@1.0.0:
+    optional: true
 
   resolve-protobuf-schema@2.1.0:
     dependencies:
@@ -4474,9 +4474,10 @@ snapshots:
   tsx@4.20.3:
     dependencies:
       esbuild: 0.25.11
-      get-tsconfig: 4.10.1
+      get-tsconfig: 4.12.0
     optionalDependencies:
       fsevents: 2.3.3
+    optional: true
 
   tunnel-agent@0.6.0:
     dependencies:
