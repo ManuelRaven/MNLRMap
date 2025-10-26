@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@maplibre/maplibre-gl-geocoder':
         specifier: ^1.8.0
-        version: 1.9.1(maplibre-gl@5.9.0)
+        version: 1.9.1(maplibre-gl@5.10.0)
       '@protomaps/basemaps':
         specifier: ^5.3.0
         version: 5.6.0
@@ -25,7 +25,7 @@ importers:
         version: 1.0.2
       maplibre-gl:
         specifier: ^5.4.0
-        version: 5.9.0
+        version: 5.10.0
       pinia:
         specifier: ^3.0.0
         version: 3.0.3(typescript@5.9.3)(vue@3.5.22(typescript@5.9.3))
@@ -471,8 +471,8 @@ packages:
     peerDependencies:
       maplibre-gl: '>=4.0.0'
 
-  '@maplibre/maplibre-gl-style-spec@24.2.0':
-    resolution: {integrity: sha512-cE80g83fRcBbZbQC70siOUxUK6YJ/5ZkClDZbmm+hzrUbv+J6yntkMmcpdz9DbOrWOM7FHKR5rruc6Q/hWx5cA==}
+  '@maplibre/maplibre-gl-style-spec@24.3.0':
+    resolution: {integrity: sha512-CTJc/Nvldv+GNQuis29VnyV0TYsFTgQBY3SNagTzZ28oHDsDYJ7LwEmfick4Z30wPwI/4gXe3se8PH2IIfLx2g==}
     hasBin: true
 
   '@maplibre/vt-pbf@4.0.3':
@@ -1497,8 +1497,8 @@ packages:
   map-stream@0.1.0:
     resolution: {integrity: sha512-CkYQrPYZfWnu/DAmVCpTSX/xHpKZ80eKh2lAkyA6AJTef6bW+6JpbQZN5rofum7da+SyN1bi5ctTm+lTfcCW3g==}
 
-  maplibre-gl@5.9.0:
-    resolution: {integrity: sha512-YxW9glb/YrDXGDhqy1u+aG113+L86ttAUpTd6sCkGHyUKMXOX8qbGHJQVqxOczy+4CtRKnqcCfSura2MzB0nQA==}
+  maplibre-gl@5.10.0:
+    resolution: {integrity: sha512-eLhlX8Fnpaoo7+uGqggZmXmZld6WrbzOJUPB7G8JB8XpminlTnrQTtXilMHduR8fsNVxrzD8yRRqEoajONc8LQ==}
     engines: {node: '>=16.14.0', npm: '>=8.1.0'}
 
   math-intrinsics@1.1.0:
@@ -2675,16 +2675,16 @@ snapshots:
 
   '@mapbox/whoots-js@3.1.0': {}
 
-  '@maplibre/maplibre-gl-geocoder@1.9.1(maplibre-gl@5.9.0)':
+  '@maplibre/maplibre-gl-geocoder@1.9.1(maplibre-gl@5.10.0)':
     dependencies:
       events: 3.3.0
       lodash.debounce: 4.0.8
-      maplibre-gl: 5.9.0
+      maplibre-gl: 5.10.0
       subtag: 0.5.0
       suggestions-list: 0.0.2
       xtend: 4.0.2
 
-  '@maplibre/maplibre-gl-style-spec@24.2.0':
+  '@maplibre/maplibre-gl-style-spec@24.3.0':
     dependencies:
       '@mapbox/jsonlint-lines-primitives': 2.0.2
       '@mapbox/unitbezier': 0.0.1
@@ -3072,7 +3072,7 @@ snapshots:
   '@watergis/maplibre-gl-export@4.1.0':
     dependencies:
       jspdf: 3.0.2
-      maplibre-gl: 5.9.0
+      maplibre-gl: 5.10.0
 
   abbrev@1.1.1:
     optional: true
@@ -3772,7 +3772,7 @@ snapshots:
 
   map-stream@0.1.0: {}
 
-  maplibre-gl@5.9.0:
+  maplibre-gl@5.10.0:
     dependencies:
       '@mapbox/geojson-rewind': 0.5.2
       '@mapbox/jsonlint-lines-primitives': 2.0.2
@@ -3781,7 +3781,7 @@ snapshots:
       '@mapbox/unitbezier': 0.0.1
       '@mapbox/vector-tile': 2.0.4
       '@mapbox/whoots-js': 3.1.0
-      '@maplibre/maplibre-gl-style-spec': 24.2.0
+      '@maplibre/maplibre-gl-style-spec': 24.3.0
       '@maplibre/vt-pbf': 4.0.3
       '@types/geojson': 7946.0.16
       '@types/geojson-vt': 3.2.5
