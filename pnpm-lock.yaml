@@ -13,7 +13,7 @@ importers:
         version: 1.9.1(maplibre-gl@5.10.0)
       '@protomaps/basemaps':
         specifier: ^5.3.0
-        version: 5.6.0
+        version: 5.7.0
       '@quasar/extras':
         specifier: ^1.16.17
         version: 1.17.0
@@ -571,8 +571,8 @@ packages:
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
 
-  '@protomaps/basemaps@5.6.0':
-    resolution: {integrity: sha512-BRzMRu1P+jIzWfhfl/fkF1uSZnW4vUbZtEu5fl4+IfsSZ/NWB+IVfiK2FQ+c9cWA/QqpDOpGL80B2L4riULwYw==}
+  '@protomaps/basemaps@5.7.0':
+    resolution: {integrity: sha512-vIInnzVSxHuOcvj1BFGkCjlFxG/9a1GV23t98kGEVcPUM7aEqTnf6loUHTRJYX5eCz+WCO16N0aibr1SLg830Q==}
     hasBin: true
 
   '@quasar/extras@1.17.0':
@@ -2777,7 +2777,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@protomaps/basemaps@5.6.0': {}
+  '@protomaps/basemaps@5.7.0': {}
 
   '@quasar/extras@1.17.0': {}
 
