@@ -53,7 +53,7 @@ importers:
         version: 1.10.0(@vitejs/plugin-vue@5.2.4(vite@6.4.1(@types/node@22.19.1)(sass-embedded@1.93.3)(sass@1.93.3)(tsx@4.20.3))(vue@3.5.24(typescript@5.9.3)))(quasar@2.18.6)(vite@6.4.1(@types/node@22.19.1)(sass-embedded@1.93.3)(sass@1.93.3)(tsx@4.20.3))(vue@3.5.24(typescript@5.9.3))
       '@tsconfig/node22':
         specifier: ^22.0.0
-        version: 22.0.4
+        version: 22.0.5
       '@types/leaflet':
         specifier: ^1.9.17
         version: 1.9.21
@@ -874,8 +874,8 @@ packages:
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
     engines: {node: '>= 6'}
 
-  '@tsconfig/node22@22.0.4':
-    resolution: {integrity: sha512-GI0gtqW+8Bz9UMOsOO1z3w1ebspOkVjSyeJ18r96LW82OOZenpzWXti/+f/MgPy1hqXTIRXn8QpGIOYHgKkTnQ==}
+  '@tsconfig/node22@22.0.5':
+    resolution: {integrity: sha512-hLf2ld+sYN/BtOJjHUWOk568dvjFQkHnLNa6zce25GIH+vxKfvTgm3qpaH6ToF5tu/NN0IH66s+Bb5wElHrLcw==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -3107,7 +3107,7 @@ snapshots:
   '@tootallnate/once@1.1.2':
     optional: true
 
-  '@tsconfig/node22@22.0.4': {}
+  '@tsconfig/node22@22.0.5': {}
 
   '@types/estree@1.0.8': {}
 
