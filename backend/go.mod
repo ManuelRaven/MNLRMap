@@ -7,7 +7,7 @@ toolchain go1.25.5
 require (
 	github.com/codingsince1985/geo-golang v1.8.5
 	github.com/joho/godotenv v1.5.1
-	github.com/pocketbase/pocketbase v0.34.0
+	github.com/pocketbase/pocketbase v0.34.1
 	github.com/protomaps/go-pmtiles v1.28.2
 )
 
@@ -84,7 +84,7 @@ require (
 	go.opentelemetry.io/otel/trace v1.34.0 // indirect
 	gocloud.dev v0.40.0 // indirect
 	golang.org/x/crypto v0.45.0 // indirect
-	golang.org/x/exp v0.0.0-20251113190631-e25ba8c21ef6 // indirect
+	golang.org/x/exp v0.0.0-20251125195548-87e1e737ad39 // indirect
 	golang.org/x/image v0.33.0 // indirect
 	golang.org/x/net v0.47.0 // indirect
 	golang.org/x/oauth2 v0.33.0 // indirect
