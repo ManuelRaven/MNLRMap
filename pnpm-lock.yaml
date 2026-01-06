@@ -86,7 +86,7 @@ importers:
         version: 8.0.4
       pocketbase-typegen:
         specifier: ^1.3.0
-        version: 1.3.2(encoding@0.1.13)
+        version: 1.3.3(encoding@0.1.13)
       sass-embedded:
         specifier: ^1.80.2
         version: 1.97.2
@@ -1371,8 +1371,8 @@ packages:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
 
-  form-data@4.0.4:
-    resolution: {integrity: sha512-KrGhL9Q4zjj0kiUt5OO4Mr/A/jlI2jDYs5eHBpYHPcBEVSiipAvn2Ko2HnPe20rmcuuvMHNdZFp+4IlGTMF0Ow==}
+  form-data@4.0.5:
+    resolution: {integrity: sha512-8RipRLol37bNs2bhoV67fiTEvdTrbMUYcFTiy3+wuuOnUog2QBHCZWXDRijWQfAkhBj2Uf5UnVaiWwA5vdd82w==}
     engines: {node: '>= 6'}
 
   from@0.1.7:
@@ -1538,8 +1538,8 @@ packages:
   iobuffer@5.4.0:
     resolution: {integrity: sha512-DRebOWuqDvxunfkNJAlc3IzWIPD5xVxwUNbHr7xKB8E6aLJxIPfNX3CoMJghcFjpv6RWQsrcJbghtEwSPoJqMA==}
 
-  ip-address@10.0.1:
-    resolution: {integrity: sha512-NWv9YLW4PoW2B7xtzaS3NCot75m6nK7Icdv0o3lfMceJVRfSoQwqD4wEH5rLwoKJwUiZ/rfpiVBhnaF0FK4HoA==}
+  ip-address@10.1.0:
+    resolution: {integrity: sha512-XXADHxXmvT9+CRxhXg56LJovE+bmWnEWB78LB83VZTprKTmaC5QfruXocxzTZ2Kl0DNwKuBdlIhjL8LeY8Sf8Q==}
     engines: {node: '>= 12'}
 
   is-docker@3.0.0:
@@ -1767,8 +1767,8 @@ packages:
     resolution: {integrity: sha512-myRT3DiWPHqho5PrJaIRyaMv2kgYf0mUVgBNOYMuCH5Ki1yEiQaf/ZJuQ62nvpc44wL5WDbTX7yGJi1Neevw8w==}
     engines: {node: '>= 0.6'}
 
-  node-abi@3.79.0:
-    resolution: {integrity: sha512-Pr/5KdBQGG8TirdkS0qN3B+f3eo8zTOfZQWAxHoJqopMz2/uvRnG+S4fWu/6AZxKei2CP2p/psdQ5HFC2Ap5BA==}
+  node-abi@3.85.0:
+    resolution: {integrity: sha512-zsFhmbkAzwhTft6nd3VxcG0cvJsT70rL+BIGHWVq5fi6MwGrHwzqKaxXE+Hl2GmnGItnDKPPkO5/LQqjVkIdFg==}
     engines: {node: '>=10'}
 
   node-addon-api@7.1.1:
@@ -1895,8 +1895,8 @@ packages:
   pmtiles@4.3.2:
     resolution: {integrity: sha512-Ath2F2U2E37QyNXjN1HOF+oLiNIbdrDYrk/K3C9K4Pgw2anwQX10y4WYWEH9O75vPiu0gBbSWIAbSG19svyvZg==}
 
-  pocketbase-typegen@1.3.2:
-    resolution: {integrity: sha512-HWq/vm4zragt68n3ybUj+BoFdwITPgqIdLm/D9VIi9m5a55GgaafpOB9BpKBHkesaDH5f6dOTb3ZWbdwlwmEdQ==}
+  pocketbase-typegen@1.3.3:
+    resolution: {integrity: sha512-9RnoS0Hm7kg4dEAV0zz21OkULy+t1DpWBeZHT9j4ZJu3L58pdfva/2314mhfE2hrOUeNiedqoFtfkJ9ZYQ8yng==}
     hasBin: true
 
   pocketbase@0.26.5:
@@ -3738,7 +3738,7 @@ snapshots:
       to-regex-range: 5.0.1
     optional: true
 
-  form-data@4.0.4:
+  form-data@4.0.5:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
@@ -3918,7 +3918,7 @@ snapshots:
 
   iobuffer@5.4.0: {}
 
-  ip-address@10.0.1:
+  ip-address@10.1.0:
     optional: true
 
   is-docker@3.0.0: {}
@@ -4152,7 +4152,7 @@ snapshots:
   negotiator@0.6.4:
     optional: true
 
-  node-abi@3.79.0:
+  node-abi@3.85.0:
     dependencies:
       semver: 7.7.3
 
@@ -4280,12 +4280,12 @@ snapshots:
     dependencies:
       fflate: 0.8.2
 
-  pocketbase-typegen@1.3.2(encoding@0.1.13):
+  pocketbase-typegen@1.3.3(encoding@0.1.13):
     dependencies:
       commander: 9.5.0
       cross-fetch: 3.2.0(encoding@0.1.13)
       dotenv-flow: 4.1.0
-      form-data: 4.0.4
+      form-data: 4.0.5
       sqlite: 4.2.1
       sqlite3: 5.1.7
     transitivePeerDependencies:
@@ -4311,7 +4311,7 @@ snapshots:
       minimist: 1.2.8
       mkdirp-classic: 0.5.3
       napi-build-utils: 2.0.0
-      node-abi: 3.79.0
+      node-abi: 3.85.0
       pump: 3.0.3
       rc: 1.2.8
       simple-get: 4.0.1
@@ -4585,7 +4585,7 @@ snapshots:
 
   socks@2.8.7:
     dependencies:
-      ip-address: 10.0.1
+      ip-address: 10.1.0
       smart-buffer: 4.2.0
     optional: true
 
