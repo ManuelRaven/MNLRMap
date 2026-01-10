@@ -7,7 +7,7 @@ toolchain go1.25.5
 require (
 	github.com/codingsince1985/geo-golang v1.8.5
 	github.com/joho/godotenv v1.5.1
-	github.com/pocketbase/pocketbase v0.35.0
+	github.com/pocketbase/pocketbase v0.35.1
 	github.com/protomaps/go-pmtiles v1.29.1
 )
 
@@ -105,9 +105,9 @@ require (
 	golang.org/x/net v0.48.0 // indirect
 	golang.org/x/oauth2 v0.34.0 // indirect
 	golang.org/x/sync v0.19.0 // indirect
-	golang.org/x/sys v0.39.0 // indirect
+	golang.org/x/sys v0.40.0 // indirect
 	golang.org/x/term v0.38.0 // indirect
-	golang.org/x/text v0.32.0 // indirect
+	golang.org/x/text v0.33.0 // indirect
 	golang.org/x/time v0.14.0 // indirect
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
 	google.golang.org/api v0.256.0 // indirect
@@ -119,6 +119,6 @@ require (
 	modernc.org/libc v1.66.10 // indirect
 	modernc.org/mathutil v1.7.1 // indirect
 	modernc.org/memory v1.11.0 // indirect
-	modernc.org/sqlite v1.41.0 // indirect
+	modernc.org/sqlite v1.43.0 // indirect
 	zombiezen.com/go/sqlite v1.1.2 // indirect
 )
