@@ -22,7 +22,7 @@ importers:
         version: 1.0.13
       leaflet-scribe:
         specifier: ^1.0.2
-        version: 1.0.4
+        version: 1.0.7
       maplibre-gl:
         specifier: ^5.4.0
         version: 5.15.0
@@ -1630,8 +1630,8 @@ packages:
   kolorist@1.8.0:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
 
-  leaflet-scribe@1.0.4:
-    resolution: {integrity: sha512-zYb4czgagJI9nEjSefstGPMTLE0g/pHbkeAfVP4AuZM6aueCVC6YcNVcbgjpgVXvM+FBhT6G0zpg33a8Rst/jw==}
+  leaflet-scribe@1.0.7:
+    resolution: {integrity: sha512-1FzJd2EfEqGsI5QDd7Aw4yGsPqcEHndmyhr2w8rcO9rwvri33LxLQDcv19Uml+qJFF6fv4TkLw6+q9zWVqZ2NQ==}
 
   leaflet@1.9.4:
     resolution: {integrity: sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==}
@@ -3990,7 +3990,7 @@ snapshots:
 
   kolorist@1.8.0: {}
 
-  leaflet-scribe@1.0.4: {}
+  leaflet-scribe@1.0.7: {}
 
   leaflet@1.9.4: {}
 
