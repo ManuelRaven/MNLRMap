@@ -7,7 +7,7 @@ toolchain go1.25.6
 require (
 	github.com/codingsince1985/geo-golang v1.8.5
 	github.com/joho/godotenv v1.5.1
-	github.com/pocketbase/pocketbase v0.36.0
+	github.com/pocketbase/pocketbase v0.36.1
 	github.com/protomaps/go-pmtiles v1.29.1
 )
 
@@ -119,6 +119,6 @@ require (
 	modernc.org/libc v1.67.6 // indirect
 	modernc.org/mathutil v1.7.1 // indirect
 	modernc.org/memory v1.11.0 // indirect
-	modernc.org/sqlite v1.44.1 // indirect
+	modernc.org/sqlite v1.44.2 // indirect
 	zombiezen.com/go/sqlite v1.1.2 // indirect
 )
