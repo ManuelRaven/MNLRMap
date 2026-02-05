@@ -8,7 +8,7 @@ require (
 	github.com/codingsince1985/geo-golang v1.8.5
 	github.com/joho/godotenv v1.5.1
 	github.com/pocketbase/pocketbase v0.36.2
-	github.com/protomaps/go-pmtiles v1.29.1
+	github.com/protomaps/go-pmtiles v1.30.0
 )
 
 require (
