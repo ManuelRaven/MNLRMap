@@ -7,7 +7,7 @@ toolchain go1.26.0
 require (
 	github.com/codingsince1985/geo-golang v1.8.5
 	github.com/joho/godotenv v1.5.1
-	github.com/pocketbase/pocketbase v0.36.2
+	github.com/pocketbase/pocketbase v0.36.3
 	github.com/protomaps/go-pmtiles v1.30.0
 )
 
@@ -73,7 +73,7 @@ require (
 	github.com/ncruces/go-strftime v1.0.0 // indirect
 	github.com/paulmach/orb v0.10.0 // indirect
 	github.com/planetscale/vtprotobuf v0.6.1-0.20240319094008-0393e58bdf10 // indirect
-	github.com/pocketbase/dbx v1.11.0 // indirect
+	github.com/pocketbase/dbx v1.12.0 // indirect
 	github.com/prometheus/client_golang v1.23.2 // indirect
 	github.com/prometheus/client_model v0.6.2 // indirect
 	github.com/prometheus/common v0.66.1 // indirect
@@ -119,6 +119,6 @@ require (
 	modernc.org/libc v1.67.6 // indirect
 	modernc.org/mathutil v1.7.1 // indirect
 	modernc.org/memory v1.11.0 // indirect
-	modernc.org/sqlite v1.44.3 // indirect
+	modernc.org/sqlite v1.45.0 // indirect
 	zombiezen.com/go/sqlite v1.1.2 // indirect
 )
