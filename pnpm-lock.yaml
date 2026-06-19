@@ -74,7 +74,7 @@ importers:
         version: 0.9.1(typescript@5.9.3)(vue@3.5.30(typescript@5.9.3))
       '@watergis/maplibre-gl-export':
         specifier: ^4.0.1
-        version: 4.1.1
+        version: 4.1.2
       concurrently:
         specifier: ^9.1.0
         version: 9.2.1
@@ -252,8 +252,8 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/runtime@7.28.6':
-    resolution: {integrity: sha512-05WQkdpL9COIMz4LjTxGpPNCdlpyimKppYNoJ5Di5EUObifl8t4tuLuUBBZEpoLYOmfvIWrsp9fCl0HoPRVTdA==}
+  '@babel/runtime@7.29.7':
+    resolution: {integrity: sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.27.2':
@@ -466,11 +466,20 @@ packages:
   '@mapbox/tiny-sdf@2.0.7':
     resolution: {integrity: sha512-25gQLQMcpivjOSA40g3gO6qgiFPDpWRoMfd+G/GoppPIeP6JDaMMkMrEJnMZhKyyS6iKwVt5YKu02vCUyJM3Ug==}
 
+  '@mapbox/tiny-sdf@2.2.0':
+    resolution: {integrity: sha512-LVL4wgI9YAum5V+LNVQO6QgFBPw7/MIIY4XJPNsPDMrjEwcE+JfKk1LuIl8GnF197ejVdC9QdPaxrx5gfgdGXg==}
+
   '@mapbox/unitbezier@0.0.1':
     resolution: {integrity: sha512-nMkuDXFv60aBr9soUG5q+GvZYL+2KZHVvsqFCzqnkGEf46U2fvmytHaEVc1/YZbiLn8X+eR3QzX1+dwDO1lxlw==}
 
+  '@mapbox/unitbezier@1.0.0':
+    resolution: {integrity: sha512-fqd515fjBmANKGGsQ286E2Wvj/XvDFpGzwJxq4CI6jMQue6Oy04uCKp+JWKF00xRTmk6cEu1jPJ9p3xqH8YWqQ==}
+
   '@mapbox/vector-tile@2.0.4':
     resolution: {integrity: sha512-AkOLcbgGTdXScosBWwmmD7cDlvOjkg/DetGva26pIRiZPdeJYjYKarIlb4uxVzi6bwHO6EWH82eZ5Nuv4T5DUg==}
+
+  '@mapbox/vector-tile@2.0.5':
+    resolution: {integrity: sha512-pXj8m7KTsqZt+1jsE0xIpGvqTSbblfkuEJL/NJmNePMtEwxO8V3XMDo9WMSfDeqHvCtBI9Lmt4mGcGR10zecmw==}
 
   '@mapbox/whoots-js@3.1.0':
     resolution: {integrity: sha512-Es6WcD0nO5l+2BOQS4uLfNPYQaNDfbot3X1XUoloz+x0mPDS3eeORZJl06HXjwBG1fOGwCRnzK88LMdxKRrd6Q==}
@@ -482,21 +491,34 @@ packages:
   '@maplibre/geojson-vt@6.0.2':
     resolution: {integrity: sha512-OnXnV2m1yBULKOlUanNFTiOeXCktvWYY4yWoHVETlp6ShJGUhY3DNt9XzPByL24h4JcoJRccPBlMhH1o8cvmyQ==}
 
+  '@maplibre/geojson-vt@6.1.0':
+    resolution: {integrity: sha512-2eIY4gZxeKIVOZVNkAMb+5NgXhgsMQpOveTQAvnp53LYqHGJZDidk7Ew0Tged9PThidpbS+NFTh0g4zivhPDzQ==}
+
   '@maplibre/maplibre-gl-geocoder@1.9.4':
     resolution: {integrity: sha512-ss0NMpjUgK1/8YrrikrAtdda41jERiGg+XqwPkj52AhwvQTLZEnZSU7IhqdyuE1FZ/QhlzAauMbyzJUTTxDscw==}
     engines: {node: '>=18'}
     peerDependencies:
       maplibre-gl: '>=4.0.0'
 
+  '@maplibre/maplibre-gl-style-spec@24.10.0':
+    resolution: {integrity: sha512-lichxSiagMEBBrqHF0trtMQH9RKh+9jUlIJl0qW0QHvt2H/tbvUWdE+ZzI2Jd0/pT7j/iavLonlPu7EQ/ixTOw==}
+    hasBin: true
+
   '@maplibre/maplibre-gl-style-spec@24.7.0':
     resolution: {integrity: sha512-Ed7rcKYU5iELfablg9Mj+TVCsXsPBgdMyXPRAxb2v7oWg9YJnpQdZ5msDs1LESu/mtXy3Z48Vdppv2t/x5kAhw==}
     hasBin: true
+
+  '@maplibre/mlt@1.1.11':
+    resolution: {integrity: sha512-dKvjKdITw9d0y3ndGkSqLUEpWCizMtdq8NB06cHohH/JZ2sJoM7dClR9wzJLUWykjbw9RXDFmhjjNBnNW27mzw==}
 
   '@maplibre/mlt@1.1.7':
     resolution: {integrity: sha512-HZSsXrgn2V6T3o0qklMwKERfKaAxjO8shmiFnVygCtXTg4SPKWVX+U99RkvxUfCsjYBEcT4ltor8lSlBSCca7Q==}
 
   '@maplibre/vt-pbf@4.3.0':
     resolution: {integrity: sha512-jIvp8F5hQCcreqOOpEt42TJMUlsrEcpf/kI1T2v85YrQRV6PPXUcEXUg5karKtH6oh47XJZ4kHu56pUkOuqA7w==}
+
+  '@maplibre/vt-pbf@4.3.2':
+    resolution: {integrity: sha512-j6p0AdjvAR19Z3XaCysle7A4ZSo08tYOzxD0Y9NQylwPAkwJJeYub5b2eVucdeDh7erhv69DahoLOevDRERRUw==}
 
   '@npmcli/fs@1.1.1':
     resolution: {integrity: sha512-8KG5RD0GVP4ydEzRn/I4BNDuxDtqVbOdm8675T49OIG/NGhaK0pjPX7ZcDlvKYbA+ulvVK3ztfcF4uBdOxuJbQ==}
@@ -928,8 +950,8 @@ packages:
       vue:
         optional: true
 
-  '@watergis/maplibre-gl-export@4.1.1':
-    resolution: {integrity: sha512-eay6iFR0a/7rkQ8vzRBZYDWl3i5acFcaNdyNVY7h3Lqerdb0OEyW6JJWp3XhF6jD+uMW98YzvqmmIC56fZCtdw==}
+  '@watergis/maplibre-gl-export@4.1.2':
+    resolution: {integrity: sha512-t4c9ITQCM8LV3HpBF6N75oHj8jxTv5lrtcu5wmjSLLM+FVSWt4l8OuruBObgeo6k1lcpwyc9Moux5tzH0c902Q==}
 
   abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
@@ -1091,8 +1113,8 @@ packages:
     resolution: {integrity: sha512-7Vv6asjS4gMOuILabD3l739tsaxFQmC+a7pLZm02zyvs8p977bL3zEgq3yDk5rn9B0PbYgIv++jmHcuUab4RhA==}
     engines: {node: '>=18'}
 
-  core-js@3.47.0:
-    resolution: {integrity: sha512-c3Q2VVkGAUyupsjRnaNX6u8Dq2vAdzm9iuPj5FW0fRxzlxgq9Q39MDq10IvmQSpLgHQNyQzQmOo6bgGHmH3NNg==}
+  core-js@3.49.0:
+    resolution: {integrity: sha512-es1U2+YTtzpwkxVLwAFdSpaIMyQaq0PBgm3YD1W3Qpsn1NAmO3KSgZfu+oGSWVu6NvLHoHCV/aYcsE5wiB7ALg==}
 
   cross-fetch@3.2.0:
     resolution: {integrity: sha512-Q+xVJLoGOeIMXZmbUK4HYk+69cQH6LudR0Vu/pRm2YlU/hDV9CiS0gKUMaWY5f2NeUH9C1nV3bsTlCo0FsTV1Q==}
@@ -1150,8 +1172,8 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
-  dompurify@3.3.1:
-    resolution: {integrity: sha512-qkdCKzLNtrgPFP1Vo+98FRzJnBRGe4ffyCea9IwHB1fyxPOeNTHpLKYGd4Uk9xvNoH0ZoOjwZxNptyMwqrId1Q==}
+  dompurify@3.4.11:
+    resolution: {integrity: sha512-zhlUV12GsaRzMsf9q5M254YhA4+VuF0fG+QFqu6aYpoGlKtz+w8//jBcGVYBgQkR5GHjUomejY84AV+/uPbWdw==}
 
   dotenv-flow@4.1.0:
     resolution: {integrity: sha512-0cwP9jpQBQfyHwvE0cRhraZMkdV45TQedA8AAUZMsFzvmLcQyc1HPv+oX0OOYwLFjIlvgVepQ+WuQHbqDaHJZg==}
@@ -1254,6 +1276,9 @@ packages:
 
   fflate@0.8.2:
     resolution: {integrity: sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==}
+
+  fflate@0.8.3:
+    resolution: {integrity: sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==}
 
   figures@6.1.0:
     resolution: {integrity: sha512-d+l3qxjSesT4V7v2fh+QnmFnUWv9lSpjarhShNTgBOfA0ttejbQUAlHLitbjkoRiDulW0OPoQPYIGhIC8ohejg==}
@@ -1501,11 +1526,14 @@ packages:
   jsonfile@6.2.0:
     resolution: {integrity: sha512-FGuPw30AdOIUTRMC2OMRtQV+jkVj2cfPqSeWXv1NEAJ1qZ5zb1X6z1mFhbfOB/iy3ssJCD+3KuZ8r8C3uVFlAg==}
 
-  jspdf@4.0.0:
-    resolution: {integrity: sha512-w12U97Z6edKd2tXDn3LzTLg7C7QLJlx0BPfM3ecjK2BckUl9/81vZ+r5gK4/3KQdhAcEZhENUxRhtgYBj75MqQ==}
+  jspdf@4.2.1:
+    resolution: {integrity: sha512-YyAXyvnmjTbR4bHQRLzex3CuINCDlQnBqoSYyjJwTP2x9jDLuKDzy7aKUl0hgx3uhcl7xzg32agn5vlie6HIlQ==}
 
   kdbush@4.0.2:
     resolution: {integrity: sha512-WbCVYJ27Sz8zi9Q7Q0xHC+05iwkm3Znipc2XTlrnJbsHMYktW4hPhXUE8Ys1engBrvffoSCqbil1JQAa7clRpA==}
+
+  kdbush@4.1.0:
+    resolution: {integrity: sha512-e9vurzrXJQrFX6ckpHP3bvj5l+9CnYzkxDNnNQ1h2QTqdWsUAJgXiKdGNcOa1EY85dU8KbQ+z/FdQdB7P+9yfQ==}
 
   kolorist@1.8.0:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
@@ -1538,6 +1566,10 @@ packages:
 
   maplibre-gl@5.20.0:
     resolution: {integrity: sha512-hUQ/4KkxVKLbAD4coW+9/tJ9/jOKKcN7q4F92EQ5mjbUJ2m1sz6uoiB3VqW/VaogUxmWd896l1cc9TtV4+uvJA==}
+    engines: {node: '>=16.14.0', npm: '>=8.1.0'}
+
+  maplibre-gl@5.24.0:
+    resolution: {integrity: sha512-ALyFxgtd5R+65UqZ/++lOqwWcC0SNho9c27fYSyLmG7AfnAul2o46F05aDJGPbFU57wos9dgcIySHs0Xe6ia3A==}
     engines: {node: '>=16.14.0', npm: '>=8.1.0'}
 
   math-intrinsics@1.1.0:
@@ -1736,6 +1768,14 @@ packages:
 
   pbf@4.0.1:
     resolution: {integrity: sha512-SuLdBvS42z33m8ejRbInMapQe8n0D3vN/Xd5fmWM3tufNgRQFBpaW2YVJxQZV4iPNqb0vEFvssMEo5w9c6BTIA==}
+    hasBin: true
+
+  pbf@4.0.2:
+    resolution: {integrity: sha512-J0ajxARhZfpUEebxYs1vhMGMuLSXtBe1e+fFPDrf2uA2hgo+UshKfNUWOz92HJNz6/NFEXseQPddnHkTreWRqg==}
+    hasBin: true
+
+  pbf@5.1.0:
+    resolution: {integrity: sha512-Wv0yo0+uZepnoNEKsquhar1F18LogB8oeEikIhUXG16udbiXG7JecHGySwoo6kuMgjmbQYzdrTZlO+/K9t8eZg==}
     hasBin: true
 
   perfect-debounce@1.0.0:
@@ -2570,7 +2610,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/runtime@7.28.6': {}
+  '@babel/runtime@7.29.7': {}
 
   '@babel/template@7.27.2':
     dependencies:
@@ -2714,13 +2754,23 @@ snapshots:
 
   '@mapbox/tiny-sdf@2.0.7': {}
 
+  '@mapbox/tiny-sdf@2.2.0': {}
+
   '@mapbox/unitbezier@0.0.1': {}
+
+  '@mapbox/unitbezier@1.0.0': {}
 
   '@mapbox/vector-tile@2.0.4':
     dependencies:
       '@mapbox/point-geometry': 1.1.0
       '@types/geojson': 7946.0.16
       pbf: 4.0.1
+
+  '@mapbox/vector-tile@2.0.5':
+    dependencies:
+      '@mapbox/point-geometry': 1.1.0
+      '@types/geojson': 7946.0.16
+      pbf: 4.0.2
 
   '@mapbox/whoots-js@3.1.0': {}
 
@@ -2729,6 +2779,10 @@ snapshots:
   '@maplibre/geojson-vt@6.0.2':
     dependencies:
       kdbush: 4.0.2
+
+  '@maplibre/geojson-vt@6.1.0':
+    dependencies:
+      kdbush: 4.1.0
 
   '@maplibre/maplibre-gl-geocoder@1.9.4(maplibre-gl@5.20.0)':
     dependencies:
@@ -2739,6 +2793,15 @@ snapshots:
       suggestions-list: 0.0.2
       xtend: 4.0.2
 
+  '@maplibre/maplibre-gl-style-spec@24.10.0':
+    dependencies:
+      '@mapbox/jsonlint-lines-primitives': 2.0.2
+      '@mapbox/unitbezier': 1.0.0
+      json-stringify-pretty-compact: 4.0.0
+      minimist: 1.2.8
+      quickselect: 3.0.0
+      tinyqueue: 3.0.0
+
   '@maplibre/maplibre-gl-style-spec@24.7.0':
     dependencies:
       '@mapbox/jsonlint-lines-primitives': 2.0.2
@@ -2748,6 +2811,10 @@ snapshots:
       quickselect: 3.0.0
       rw: 1.3.3
       tinyqueue: 3.0.0
+
+  '@maplibre/mlt@1.1.11':
+    dependencies:
+      '@mapbox/point-geometry': 1.1.0
 
   '@maplibre/mlt@1.1.7':
     dependencies:
@@ -2762,6 +2829,12 @@ snapshots:
       '@types/supercluster': 7.1.3
       pbf: 4.0.1
       supercluster: 8.0.1
+
+  '@maplibre/vt-pbf@4.3.2':
+    dependencies:
+      '@mapbox/point-geometry': 1.1.0
+      '@types/geojson': 7946.0.16
+      pbf: 5.1.0
 
   '@npmcli/fs@1.1.1':
     dependencies:
@@ -3167,10 +3240,10 @@ snapshots:
       typescript: 5.9.3
       vue: 3.5.30(typescript@5.9.3)
 
-  '@watergis/maplibre-gl-export@4.1.1':
+  '@watergis/maplibre-gl-export@4.1.2':
     dependencies:
-      jspdf: 4.0.0
-      maplibre-gl: 5.20.0
+      jspdf: 4.2.1
+      maplibre-gl: 5.24.0
 
   abbrev@1.1.1:
     optional: true
@@ -3295,9 +3368,9 @@ snapshots:
 
   canvg@3.0.11:
     dependencies:
-      '@babel/runtime': 7.28.6
+      '@babel/runtime': 7.29.7
       '@types/raf': 3.4.3
-      core-js: 3.47.0
+      core-js: 3.49.0
       raf: 3.4.1
       regenerator-runtime: 0.13.11
       rgbcolor: 1.0.1
@@ -3366,7 +3439,7 @@ snapshots:
     dependencies:
       is-what: 5.5.0
 
-  core-js@3.47.0:
+  core-js@3.49.0:
     optional: true
 
   cross-fetch@3.2.0(encoding@0.1.13):
@@ -3416,7 +3489,7 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
-  dompurify@3.3.1:
+  dompurify@3.4.11:
     optionalDependencies:
       '@types/trusted-types': 2.0.7
     optional: true
@@ -3548,6 +3621,8 @@ snapshots:
       picomatch: 4.0.4
 
   fflate@0.8.2: {}
+
+  fflate@0.8.3: {}
 
   figures@6.1.0:
     dependencies:
@@ -3785,18 +3860,20 @@ snapshots:
     optionalDependencies:
       graceful-fs: 4.2.11
 
-  jspdf@4.0.0:
+  jspdf@4.2.1:
     dependencies:
-      '@babel/runtime': 7.28.6
+      '@babel/runtime': 7.29.7
       fast-png: 6.4.0
-      fflate: 0.8.2
+      fflate: 0.8.3
     optionalDependencies:
       canvg: 3.0.11
-      core-js: 3.47.0
-      dompurify: 3.3.1
+      core-js: 3.49.0
+      dompurify: 3.4.11
       html2canvas: 1.4.1
 
   kdbush@4.0.2: {}
+
+  kdbush@4.1.0: {}
 
   kolorist@1.8.0: {}
 
@@ -3862,6 +3939,28 @@ snapshots:
       kdbush: 4.0.2
       murmurhash-js: 1.0.0
       pbf: 4.0.1
+      potpack: 2.1.0
+      quickselect: 3.0.0
+      tinyqueue: 3.0.0
+
+  maplibre-gl@5.24.0:
+    dependencies:
+      '@mapbox/jsonlint-lines-primitives': 2.0.2
+      '@mapbox/point-geometry': 1.1.0
+      '@mapbox/tiny-sdf': 2.2.0
+      '@mapbox/unitbezier': 0.0.1
+      '@mapbox/vector-tile': 2.0.5
+      '@mapbox/whoots-js': 3.1.0
+      '@maplibre/geojson-vt': 6.1.0
+      '@maplibre/maplibre-gl-style-spec': 24.10.0
+      '@maplibre/mlt': 1.1.11
+      '@maplibre/vt-pbf': 4.3.2
+      '@types/geojson': 7946.0.16
+      earcut: 3.0.2
+      gl-matrix: 3.4.4
+      kdbush: 4.1.0
+      murmurhash-js: 1.0.0
+      pbf: 4.0.2
       potpack: 2.1.0
       quickselect: 3.0.0
       tinyqueue: 3.0.0
@@ -4052,6 +4151,14 @@ snapshots:
       through: 2.3.8
 
   pbf@4.0.1:
+    dependencies:
+      resolve-protobuf-schema: 2.1.0
+
+  pbf@4.0.2:
+    dependencies:
+      resolve-protobuf-schema: 2.1.0
+
+  pbf@5.1.0:
     dependencies:
       resolve-protobuf-schema: 2.1.0
 
