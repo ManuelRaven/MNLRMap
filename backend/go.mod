@@ -2,7 +2,7 @@ module mnlr.de/mnlrmap
 
 go 1.25.0
 
-toolchain go1.26.1
+toolchain go1.26.4
 
 require (
 	github.com/codingsince1985/geo-golang v1.8.5
