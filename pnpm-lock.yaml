@@ -31,7 +31,7 @@ importers:
         version: 3.0.4(typescript@5.9.3)(vue@3.5.30(typescript@5.9.3))
       pmtiles:
         specifier: ^4.3.0
-        version: 4.4.0
+        version: 4.4.1
       pocketbase:
         specifier: ^0.26.0
         version: 0.26.8
@@ -1274,9 +1274,6 @@ packages:
       picomatch:
         optional: true
 
-  fflate@0.8.2:
-    resolution: {integrity: sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==}
-
   fflate@0.8.3:
     resolution: {integrity: sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==}
 
@@ -1809,8 +1806,8 @@ packages:
       typescript:
         optional: true
 
-  pmtiles@4.4.0:
-    resolution: {integrity: sha512-tCLI1C5134MR54i8izUWhse0QUtO/EC33n9yWp1N5dYLLvyc197U0fkF5gAJhq1TdWO9Tvl+9hgvFvM0fR27Zg==}
+  pmtiles@4.4.1:
+    resolution: {integrity: sha512-5oTeQc/yX/ft1evbpIlnoCZugQuug/iYIAj/ZTqIqzdGek4uZEho99En890EE6NOSI3JTI3IG8R7r8+SltphxA==}
 
   pocketbase-typegen@1.3.3:
     resolution: {integrity: sha512-9RnoS0Hm7kg4dEAV0zz21OkULy+t1DpWBeZHT9j4ZJu3L58pdfva/2314mhfE2hrOUeNiedqoFtfkJ9ZYQ8yng==}
@@ -3620,8 +3617,6 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.4
 
-  fflate@0.8.2: {}
-
   fflate@0.8.3: {}
 
   figures@6.1.0:
@@ -4182,9 +4177,9 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  pmtiles@4.4.0:
+  pmtiles@4.4.1:
     dependencies:
-      fflate: 0.8.2
+      fflate: 0.8.3
 
   pocketbase-typegen@1.3.3(encoding@0.1.13):
     dependencies:
