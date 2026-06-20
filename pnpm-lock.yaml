@@ -15,8 +15,8 @@ importers:
         specifier: ^5.3.0
         version: 5.7.2
       '@quasar/extras':
-        specifier: ^1.16.17
-        version: 1.18.0
+        specifier: ^2.0.0
+        version: 2.0.1
       '@types/leaflet-draw':
         specifier: ^1.0.11
         version: 1.0.13
@@ -585,8 +585,8 @@ packages:
     resolution: {integrity: sha512-K1Yk6bWdULulYg+R2QRVXx4NzJZan5YQhpejEG0c1/sXruJrfPIPZuakpf3jwAgVmjIRVQwAv+yRafDeN0aaUQ==}
     hasBin: true
 
-  '@quasar/extras@1.18.0':
-    resolution: {integrity: sha512-hIqqw56sKGujWA3sTIT1ItlVglD+eA3hAWDVxY4qjA4/BSgYJDHk6ymJCbsDPIJFT7DJsG/F3A67vELXbBAIvA==}
+  '@quasar/extras@2.0.1':
+    resolution: {integrity: sha512-gieBBROuXkVhvqXtbcVg4pHR5FDcaK+F9PaY2K2t8+EuK8OB/0aJq306DeF5+/Bqv8ixIXT9KhpRZj0HotaOew==}
 
   '@quasar/vite-plugin@1.12.0':
     resolution: {integrity: sha512-EME6h0bhsHJgpRGeJA2BvC7R5rtZGg/FWCeWAH34c0wcV77n5iIRC3jsp9Ju6gW557sOiczJXxChmhYikTrWEw==}
@@ -2409,7 +2409,7 @@ snapshots:
 
   '@protomaps/basemaps@5.7.2': {}
 
-  '@quasar/extras@1.18.0': {}
+  '@quasar/extras@2.0.1': {}
 
   '@quasar/vite-plugin@1.12.0(@vitejs/plugin-vue@5.2.4(vite@6.4.3(@types/node@22.20.0)(sass-embedded@1.100.0)(sass@1.100.0)(tsx@4.20.3))(vue@3.5.38(typescript@5.9.3)))(quasar@2.20.1)(vite@6.4.3(@types/node@22.20.0)(sass-embedded@1.100.0)(sass@1.100.0)(tsx@4.20.3))(vue@3.5.38(typescript@5.9.3))':
     dependencies:
