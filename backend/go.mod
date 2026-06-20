@@ -1,11 +1,11 @@
 module mnlr.de/mnlrmap
 
-go 1.25.0
+go 1.26.2
 
 toolchain go1.26.4
 
 require (
-	github.com/codingsince1985/geo-golang v1.8.5
+	github.com/codingsince1985/geo-golang v1.9.0
 	github.com/joho/godotenv v1.5.1
 	github.com/pocketbase/pocketbase v0.37.4
 	github.com/protomaps/go-pmtiles v1.30.3
