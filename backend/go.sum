@@ -473,6 +473,8 @@ github.com/protomaps/go-pmtiles v1.30.1 h1:3faFj9LPDd13TWRSzVBHndeeNZY2Ee+bRpcyc
 github.com/protomaps/go-pmtiles v1.30.1/go.mod h1:Me4mh2JYXXhaKXkaOdaIuyYsTe1skilWcXrCY8RS0xI=
 github.com/protomaps/go-pmtiles v1.30.3 h1:q0+Tyx+6WXRcE4fzOIUNDzd3tnEjoBJIz4SunzG30lc=
 github.com/protomaps/go-pmtiles v1.30.3/go.mod h1:QpXN5ZtUlrar3rbIyagQRbMBV5i8Cygrk2RUeNEonSM=
+github.com/protomaps/go-pmtiles v1.31.1 h1:8sYeIVrUGpFlsz/5ZAsGetFI1Cf86CxvLSx8+yRBO48=
+github.com/protomaps/go-pmtiles v1.31.1/go.mod h1:QpXN5ZtUlrar3rbIyagQRbMBV5i8Cygrk2RUeNEonSM=
 github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec h1:W09IVJc94icq4NjY3clb7Lk8O1qJ8BdBEF8z0ibU0rE=
 github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec/go.mod h1:qqbHyh8v60DhA7CoWK5oRCqLrMHRGoxYCSS9EjAz6Eo=
 github.com/rivo/uniseg v0.2.0 h1:S1pD9weZBuJdFmowNwbpi7BJ8TNftyUImj/0WQi72jY=
