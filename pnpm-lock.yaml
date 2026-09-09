@@ -56,7 +56,7 @@ importers:
         version: 22.0.6
       '@types/leaflet':
         specifier: ^1.9.17
-        version: 1.9.21
+        version: 1.9.22
       '@types/node':
         specifier: ^22.9.3
         version: 22.20.1
@@ -65,7 +65,7 @@ importers:
         version: 5.2.4(vite@6.4.3(@types/node@22.20.1)(sass-embedded@1.100.0)(sass@1.100.0)(tsx@4.20.3))(vue@3.5.40(typescript@5.9.3))
       '@vue-leaflet/vue-leaflet':
         specifier: ^0.10.1
-        version: 0.10.1(@types/leaflet@1.9.21)(leaflet@1.9.4)(typescript@5.9.3)
+        version: 0.10.1(@types/leaflet@1.9.22)(leaflet@1.9.4)(typescript@5.9.3)
       '@vue/compiler-sfc':
         specifier: ^3.5.13
         version: 3.5.40
@@ -751,8 +751,8 @@ packages:
   '@types/leaflet-draw@1.0.13':
     resolution: {integrity: sha512-YU82kilOaU+wPNbqKCCDfHH3hqepN6XilrBwG/mSeZ/z4ewumaRCOah44s3FMxSu/Aa0SVa3PPJvhIZDUA09mw==}
 
-  '@types/leaflet@1.9.21':
-    resolution: {integrity: sha512-TbAd9DaPGSnzp6QvtYngntMZgcRk+igFELwR2N99XZn7RXUdKgsXMR+28bUO0rPsWp8MIu/f47luLIQuSLYv/w==}
+  '@types/leaflet@1.9.22':
+    resolution: {integrity: sha512-h3lhECYEKDasG7LFHu+GiHqAvsgLuQvlJvVZzJDGONo3sEL+wUOqSFLnwkZlK0qVxnxbuGFW8iBlJNYs5wgndA==}
 
   '@types/node@22.20.1':
     resolution: {integrity: sha512-EANqOCF9QFyra+4pfxUcX9STKJpCLjMbObVzljIJomAWSnuSIEAvyzEU53GaajbXJEgdh0iEcPL+DGvpUd4k1Q==}
@@ -2498,9 +2498,9 @@ snapshots:
 
   '@types/leaflet-draw@1.0.13':
     dependencies:
-      '@types/leaflet': 1.9.21
+      '@types/leaflet': 1.9.22
 
-  '@types/leaflet@1.9.21':
+  '@types/leaflet@1.9.22':
     dependencies:
       '@types/geojson': 7946.0.16
 
@@ -2533,12 +2533,12 @@ snapshots:
       path-browserify: 1.0.1
       vscode-uri: 3.1.0
 
-  '@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.21)(leaflet@1.9.4)(typescript@5.9.3)':
+  '@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.22)(leaflet@1.9.4)(typescript@5.9.3)':
     dependencies:
       leaflet: 1.9.4
       vue: 3.5.40(typescript@5.9.3)
     optionalDependencies:
-      '@types/leaflet': 1.9.21
+      '@types/leaflet': 1.9.22
     transitivePeerDependencies:
       - typescript
 
