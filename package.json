@@ -21,7 +21,7 @@
   "dependencies": {
     "@maplibre/maplibre-gl-geocoder": "^1.8.0",
     "@protomaps/basemaps": "^5.3.0",
-    "@quasar/extras": "^1.16.17",
+    "@quasar/extras": "^2.0.0",
     "@types/leaflet-draw": "^1.0.11",
     "leaflet-scribe": "^1.0.2",
     "maplibre-gl": "^5.4.0",
