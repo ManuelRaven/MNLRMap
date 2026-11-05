@@ -24,7 +24,7 @@
     "@quasar/extras": "^1.16.17",
     "@types/leaflet-draw": "^1.0.11",
     "leaflet-scribe": "^1.0.2",
-    "maplibre-gl": "^5.4.0",
+    "maplibre-gl": "^6.0.0",
     "pinia": "^3.0.0",
     "pmtiles": "^4.3.0",
     "pocketbase": "^0.28.0",
